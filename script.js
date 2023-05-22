@@ -8,11 +8,11 @@ const action = {
     low: 'low'
 }
 
+const audio = new Audio("sounds/futuristic-beat-146661.mp3")
 
 
 function controlAudio(id, option){
-   const element = document.getElementById(id);
-   const audio = new Audio('sounds/futuristic-beat-146661.mp3')
+   const element = document.getElementById(id); 
    option = playingSound ? action.pause: option;
    
    switch(option){
@@ -41,11 +41,13 @@ function controlVolume(id, option){
       case action.low : 
          element.firstElementChild.classList.remove("fa-volume-high"); 
          element.firstElementChild.classList.add("fa-volume-xmark"); 
+         audio.muted = true;
          muteSound = true;
       break;
       case action.high: 
          element.firstElementChild.classList.remove("fa-volume-xmark"); 
          element.firstElementChild.classList.add("fa-volume-high");
+         audio.muted = false;
          muteSound = false; 
       break;
     }
