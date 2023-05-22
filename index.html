@@ -7,6 +7,7 @@
     <title>Phone</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="container">
@@ -45,47 +46,29 @@
                <div class="mt">
                     <div class="row">
                         <span class="text-card">Músicas</span>
+                    </div>                  
+
+                    <div class="row mt-10 justify-between item-music">
+                        <div class="play-icon" id="1" onclick="controlAudio(1,'play')">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <div class="description">
+                            <div class="music">Sinfonia 40</div>
+                            <div class="author">Amadeus Mozart</div>
+                        </div>
+                        <div class="waves-icon" id="W1" onclick="controlVolume('W1','low')">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </div>
                     </div>
 
-                    <div class="row">
-                        <audio controls>
-                            <source src="sounds/break.mp3" type="audio/ogg">
-                            <source src="sounds/break.mp3" type="audio/mpeg">                          
-                          </audio>
-                    </div>
+              
 
-                    <div class="row mt-10">
-                        <audio controls>
-                            <source src="sounds/ambient-classical-guitar-144998 (1).mp3" type="audio/ogg">
-                            <source src="sounds/ambient-classical-guitar-144998 (1).mp3" type="audio/mpeg">                          
-                          </audio>
-                    </div>
-
-                    <div class="row mt-10">
-                        <audio controls>
-                            <source src="sounds/futuristic-beat-146661.mp3" type="audio/ogg">
-                            <source src="sounds/futuristic-beat-146661.mp3" type="audio/mpeg">                          
-                          </audio>
-                    </div>
-
-                    <div class="row mt-10">
-                        <audio controls>
-                            <source src="sounds/modern-vlog-140795.mp3" type="audio/ogg">
-                            <source src="sounds/modern-vlog-140795.mp3" type="audio/mpeg">                          
-                          </audio>
-                    </div>
-
-                    <div class="row mt-10">
-                        <audio controls>
-                            <source src="sounds/waterfall-140894.mp3" type="audio/ogg">
-                            <source src="sounds/waterfall-140894.mp3" type="audio/mpeg">                          
-                          </audio>
-                    </div>
-
+                   
                    
                </div>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
